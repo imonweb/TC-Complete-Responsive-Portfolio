@@ -47,3 +47,36 @@ img {
   padding: 0 4rem;
   margin: 0 auto;
 }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+ .text {
+  font-size: 1.25rem;
+  color: var(--dark-two);
+  line-height: 1.6;
+}
+
+.column-1 {
+  margin-right: 1.5rem;;
+}
+
+.column-2 {
+  margin-left: 1.5rem;;
+}
+
+.image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.z-index {
+  position: relative;
+  z-index: 2;
+}
