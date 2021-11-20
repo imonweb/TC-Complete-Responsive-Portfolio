@@ -55,6 +55,49 @@ img {
   justify-content: center;
 }
 
+.title {
+    display: inline-block;
+    padding-bottom: 1rem;
+    line-height: 1;
+    font-size: 2.8rem;
+    position: relative;
+    margin-bottom: 0.6rem;
+
+    &:before {
+      content: attr(data-title);
+      display: block;
+      margin-bottom: 0.4rem;
+      color: var(--main-color);
+      font-size: 1.15rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 5px;
+      border-radius: 3px;
+      background-color: var(--main-color);
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  } /* title */
+
+
+.section-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+    .text {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
  .text {
   font-size: 1.25rem;
   color: var(--dark-two);
