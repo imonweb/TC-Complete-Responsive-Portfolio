@@ -61,6 +61,7 @@ const skills_bars = document.querySelectorAll(".skill-progress");
 window.addEventListener("scroll", () => {
     // checkScroll(skill_wrap)
     skillsEffect();
+    countUp();
 })
 
 function checkScroll(el){
@@ -68,7 +69,8 @@ function checkScroll(el){
     // console.log(rect.top);
     // console.log(window.innerHeight)
     // console.log( el.offsetHeight)
-    console.log(rect.top + el.offsetHeight)
+
+    // console.log(rect.top + el.offsetHeight)
     if(window.innerHeight >= rect.top + el.offsetHeight) return true;
     return false;
 }
@@ -76,5 +78,37 @@ function checkScroll(el){
 function skillsEffect() {
     if(!checkScroll(skill_wrap)) return;
     skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
+}
+ 
+
+ 
+/* ====== Records ====== */
+const records_wrap = document.querySelector('.records');
+const records_numbers = document.querySelectorAll('.number');
+
+function countUp(){
+    if(!checkScroll(records_wrap)) return;
+    // console.log('hello');
+    records_numbers.forEach((numb) => {
+        const updateCount = () => {
+            let currentNum = +numb.innerText;
+            // console.log(currentNum);
+            let maxNum = +numb.dataset.num;
+            // console.log(maxNum);
+            let speed = 100;
+            const increment = Math.ceil(maxNum / speed);
+            // console.log(increment);
+            if(currentNum < maxNum){
+                numb.innerText = currentNum + increment;
+                setTimeout(updateCount, 1);
+            } else {
+                numb.innerText = maxNum;
+            }
+            
+        };
+        
+        // updateCount();
+        setTimeout(updateCount, 400);
+    })
 }
  
