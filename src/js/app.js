@@ -1,23 +1,4 @@
-// $('.grid').isotope({
-//   // options
-//   itemSelector: '.grid-item',
-//   layoutMode: 'fitRows',
-//   transitionDuration: "0.6s",
-// });
-// import Isotope from 'isotope-layout';
-
-/*  Vanilla JS */
-// var elem = document.querySelector('.grid');
-// var iso = new Isotope( elem, {
-//   // options
-//   itemSelector: '.grid-item',
-//   layoutMode: 'fitRows'
-// });
-
-
-
-// window.$ = window.jQuery = require('jquery'); window.isotope = require("isotope-layout/dist/isotope.pkgd"); var $grid = $(".our-design__gallery-items").isotope({ itemSelector: '.our-design__gallery-item', transitionDuration: 500 });
-
+  
 import Isotope from "isotope-layout";
 
 var grid = document.querySelector('.grid');
@@ -31,15 +12,7 @@ var iso = new Isotope( grid, {
           layoutMode: "fitRows",
           transitionDuration: "0.6s",
 });
-
-/*
-$('.filters ul li').click(function() { // To filter your isotope.
-    var data = $(this).attr('data-filter');
-    iso.arrange({
-       filter: data // All grid items
-    });
-});
-*/
+ 
 
 var jQueryBridget = require('jquery-bridget');
 // var Isotope = require('isotope-layout');
@@ -77,4 +50,31 @@ filter_btns.forEach( btn => btn.addEventListener("click", () => {
     //     }
     // });
 }))
+ 
+
+ 
+/* ====== About me skill progress bar ====== */
+
+const skill_wrap = document.querySelector(".skills");
+const skills_bars = document.querySelectorAll(".skill-progress");
+
+window.addEventListener("scroll", () => {
+    // checkScroll(skill_wrap)
+    skillsEffect();
+})
+
+function checkScroll(el){
+    let rect = el.getBoundingClientRect();
+    // console.log(rect.top);
+    // console.log(window.innerHeight)
+    // console.log( el.offsetHeight)
+    console.log(rect.top + el.offsetHeight)
+    if(window.innerHeight >= rect.top + el.offsetHeight) return true;
+    return false;
+}
+
+function skillsEffect() {
+    if(!checkScroll(skill_wrap)) return;
+    skills_bars.forEach((skill) => (skill.style.width = skill.dataset.progress));
+}
  
