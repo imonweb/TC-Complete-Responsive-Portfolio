@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="//unpkg.com/isotope/dist/isotope.min.css"> -->
   <title>True Coder Complete Responsive Portfolio</title>
 </head>
 <body>
@@ -129,16 +130,133 @@
 
         <div class="section-body">
           <div class="filter">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">UI/UX</button>
-            <button class="filter-btn">Web Dev</button>
-            <button class="filter-btn">Mobile App</button>
-            <button class="filter-btn">Graphic Design</button>
+            <button class="filter-btn active" data-filter="*">All</button>
+            <button class="filter-btn" data-filter=".ui">UI/UX</button>
+            <button class="filter-btn" data-filter=".webdev">Web Dev</button>
+            <button class="filter-btn" data-filter=".appdev">Mobile App</button>
+            <button class="filter-btn" data-filter=".logo">Logo Design</button>
+          </div> <!-- filter -->
+          <div class="grid">
+            <div class="grid-item logo">
+              <div class="gallery-image">
+                <img src="images/portfolio/port1.jpg" alt="port1">
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>Logo Design</h3>
+                    <h5>View Demo</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-item webdev">
+                <div class="gallery-image">
+                  <img src="images/portfolio/port2.png" alt="port2">
+                  <div class="img-overlay">
+                    <div class="plus"></div>
+                    <div class="img-description">
+                      <h3>App Development</h3>
+                      <h5>View Demo</h5>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="grid-item ui webdev">
+              <div class="gallery-image">
+                <img src="images/portfolio/port3.png" alt="port3">
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>Web Design</h3>
+                    <h5>View Demo</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item ui">
+              <div class="gallery-image">
+                <img src="images/portfolio/port4.png" alt="port4">
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>UI/UX Design</h3>
+                    <h5>View Demo</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item logo">
+              <div class="gallery-image">
+                <img src="images/portfolio/port5.jpg" alt="port5">
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>Web Development</h3>
+                    <h5>View Demo</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item appdeev">
+              <div class="gallery-image">
+                <img src="images/portfolio/port6.jpg" alt="port6">
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>Web Design</h3>
+                    <h5>View Demo</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item logo">
+              <div class="gallery-image">
+                <img src="images/portfolio/port7.jpg" alt="port7">
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>Logo Design</h3>
+                    <h5>View Demo</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item appdev ui">
+              <div class="gallery-image">
+                <img src="images/portfolio/port8.png" alt="port8">
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>App Development</h3>
+                    <h5>View Demo</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item ui webdev">
+              <div class="gallery-image">
+                <img src="images/portfolio/port9.png" alt="port9">
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>Logo Design</h3>
+                    <h5>View Demo</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> <!-- grid -->
+
+          <div class="more-folio">
+            <a href="#" class="btn">More Folio</a>
           </div>
-        </div>
+        </div> <!-- section-body -->
       </div> <!-- container -->
     </section>
 
   </main>
+
+  <!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> -->
 </body>
 </html> 

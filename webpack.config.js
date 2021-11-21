@@ -7,6 +7,8 @@ const CopyPlugin = require("copy-webpack-plugin");
 const glob = require('glob');
 const PurgeFontawesomePlugin = require('purge-fontawesome/webpack-plugin');
 
+const webpack = require('webpack');
+
 module.exports = {
   entry: './src/index.js',
   devtool: "source-map",
@@ -39,10 +41,16 @@ module.exports = {
         test: /\.(gif|png|jpg|jpeg|svg)$/i,
         type: 'asset/resource'
       },  
-    ]
+      // { test: /isotope-layout/, loader: 'imports?isotopelayout/dist/isotope.pkgd.js' },   
+    ],
   }, 
   plugins: [
         new CleanWebpackPlugin(),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        }),
         new MiniCssExtractPlugin({
           filename: '[name].css',
           chunkFilename: '[id].css',
@@ -62,6 +70,7 @@ module.exports = {
             ],
         }) 
     ],
+        
 
 }
  
