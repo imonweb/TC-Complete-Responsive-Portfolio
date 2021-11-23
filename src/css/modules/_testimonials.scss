@@ -1,0 +1,67 @@
+ 
+/* ====== Testimonials ====== */
+.testimonials {
+  background-color: var(--light-two);
+  overflow: hidden;
+
+  .testi-content {
+    margin-top: 6rem;
+    .column-1 {
+
+
+      .review {
+        position: relative;
+        padding: 2rem 1.5rem;
+
+        .rate {
+          display: flex;
+          font-size: 1.4rem;
+          color: #ebc000;
+          margin-bottom: 1.5rem;
+
+          svg {
+            margin-right: 0.3rem;
+          }
+        }
+
+        .review-text {
+          font-size: 1.35rem;
+          font-weight: 300;
+          color: #444;
+          line-height: 1.7;
+        }
+
+        .review-info {
+          margin-top: 2rem;
+
+          .review-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-one);
+          }
+
+          .review-job {
+            font-size: 1.15rem;
+            font-weight: 300;
+            color: #777;
+          }
+        }
+
+        .quote {
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: var(--main-color);
+          opacity: 0.04;
+          font-size: 8rem;
+        }
+
+      } /*  review */
+    } /*  column-1 */
+
+    .column-2 {
+
+    } /*  column-2 */
+  }
+} /*  testminials */
+ 
