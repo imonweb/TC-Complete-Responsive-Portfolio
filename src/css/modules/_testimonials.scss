@@ -6,8 +6,12 @@
 
   .testi-content {
     margin-top: 6rem;
+    
     .column-1 {
 
+      &.reviews {
+        overflow: hidden;
+      }
 
       .review {
         position: relative;
@@ -57,11 +61,36 @@
         }
 
       } /*  review */
+
+      .review-nav {
+        bottom: 2.2rem;
+        top: initial;
+        font-size: 1.8rem;
+        color: var(--main-color);
+
+        &.swiper-button-prev:after, &.swiper-button-next:after {
+          display: none;
+        } 
+      }
+
+      .swiper-button-next {
+        right: 2rem;
+        left: initial;
+        cursor: pointer;
+      }
+
+      .swiper-button-prev {
+        right: 4.5rem;
+        left: initial;
+        cursor: pointer;
+      }
+ 
     } /*  column-1 */
 
     .column-2 {
-
+      /*  nothing here */
     } /*  column-2 */
   }
 } /*  testminials */
+ 
  

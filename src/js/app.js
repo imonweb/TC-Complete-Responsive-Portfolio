@@ -112,3 +112,21 @@ function countUp(){
     })
 }
  
+ 
+/* ====== Testimonials - swiper js ====== */
+import Swiper, { Autoplay, Navigation } from 'swiper'; // index.js
+Swiper.use([Autoplay]);
+Swiper.use([Navigation]);
+// import 'swiper/css';
+ const mySwiper = new Swiper(".swiper-container", {
+    speed: 1100,
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+        delay: 5000,
+    },
+    navigation: {
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+ });

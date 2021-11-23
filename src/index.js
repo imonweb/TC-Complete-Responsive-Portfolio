@@ -9,6 +9,11 @@ dom.i2svg()
 
 // library.add(faCheck);
 dom.watch();
-
+import 'swiper/css';
 import './css/main.scss';
 import './js/app.js';
+
+ // import Swiper JS
+  // import Swiper from 'swiper';
+  // import Swiper styles
+  // import 'swiper/css';
