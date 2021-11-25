@@ -7,9 +7,10 @@
   <!-- <link rel="stylesheet" href="//unpkg.com/isotope/dist/isotope.min.css"> -->
   <title>True Coder Complete Responsive Portfolio</title>
 </head>
+<!-- <body class="stop-scrolling"> -->
 <body>
   <main>
-    <header>
+    <header id="header">
 
       <div class="overlay overlay-lg">
         <img src="images/shapes/square.png" class="shape square" alt="" />
@@ -24,6 +25,7 @@
         <img src="images/shapes/points1.png" class="points points1" alt="" />
       </div>
 
+      <!-- Nav -->
       <nav>
         <div class="container">
           <div class="logo">
@@ -31,14 +33,18 @@
           </div>
           <div class="links">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#" class="active">Hire Me</a></li>
+              <li><a href="#header">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
+              <li><a href="#contact">Contact</a></li>
+              <li><a href="#hireme" class="active">Hire Me</a></li>
             </ul>
+          </div>
+
+          <div class="hamburger-menu">
+            <div class="bar"></div>
           </div>
         </div> <!-- container -->
       </nav>
@@ -60,7 +66,7 @@
     </header>
 
     <!-- Services -->
-    <section class="services section">
+    <section class="services section" id="services">
       <div class="container">
         <div class="section-header">
           <h3 class="title" data-title="What I Do">Services</h3>
@@ -110,7 +116,7 @@
     </section>
 
     <!-- Portfolio -->
-    <section class="portfolio section">
+    <section class="portfolio section" id="portfolio">
       <div class="background-bg">
         <div class="overlay overlay-sm">
           <img src="images/shapes/half-circle.png" alt="half-circle" class="shape half-circle">
@@ -256,7 +262,7 @@
     </section>
 
     <!-- About -->
-    <section class="about section">
+    <section class="about section" id="about">
       <div class="container">
         <div class="section-header">
           <h3 class="title" data-title="Who am I">About me</h3>
@@ -426,7 +432,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials section">
+    <section class="testimonials section" id="testimonials">
       <div class="container">
         <div class="section-header">
           <h3 class="title" data-title="What People Say">Testimonials</h3>
@@ -537,7 +543,7 @@
     </section>
 
     <!-- Contact -->
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="contact-box">
           <div class="contact-info">
@@ -613,11 +619,11 @@
         <div class="grid-4-col footer-links">
           <h3 class="title-sm">Links</h3>
           <ul>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
         <div class="grid-4-col footer-links">

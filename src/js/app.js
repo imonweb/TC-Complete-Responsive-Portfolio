@@ -148,3 +148,30 @@ footer_input.addEventListener("blur", () => {
   if (footer_input.value != "") return;
   footer_input.classList.remove("focus");
 });
+
+ 
+/* ====== Hamburger Menu ====== */
+const hamburger_menu = document.querySelector(".hamburger-menu");
+const navbar = document.querySelector("header nav");
+const links = document.querySelectorAll(".links a");
+
+/*  z index for .header-content .container.grid-2 */
+const grid2 = document.querySelector('.grid-2')
+
+function closeMenu() {
+  navbar.classList.remove("open");
+  document.body.classList.remove("stop-scrolling");
+}
+
+hamburger_menu.addEventListener("click", () => {
+  if (!navbar.classList.contains("open")) {
+    navbar.classList.add("open");
+    grid2.setAttribute('style','z-index: -1');
+    document.body.classList.add("stop-scrolling");
+  } else {
+    closeMenu();
+    grid2.setAttribute('style','z-index: 1');
+  }
+});
+ 
+links.forEach((link) => link.addEventListener("click", () => closeMenu()));
